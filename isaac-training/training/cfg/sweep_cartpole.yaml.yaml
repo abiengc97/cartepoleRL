@@ -1,0 +1,22 @@
+program: training/scripts/train.py
+method: bayes
+metric:
+  name: mean_reward
+  goal: maximize
+parameters:
+  num_envs:
+    values: [1024, 2048, 3072]
+  max_iterations:
+    values: [2000, 3000, 5000]
+  wandb.name:
+    values: ["sweep_run"]
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - --headless
+  - "True"
+  - --sim_device
+  - cuda:0
+  - --pipeline
+  - gpu

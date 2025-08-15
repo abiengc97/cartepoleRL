@@ -1,0 +1,6 @@
+wandb:
+  activate: true
+  project: "isaac-cartpole"
+  entity: "YOUR_TEAM"
+  group: "experiment-1"
+  name: "cartpole_exp1"

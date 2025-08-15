@@ -1,0 +1,12 @@
+headless: true
+sim_device: "cuda:0"
+pipeline: "gpu"
+num_envs: 2048
+max_iterations: 3000
+
+wandb:
+  activate: true
+  project: "isaac-cartpole"
+  entity: "YOUR_WANDB_USERNAME_OR_TEAM"
+  group: "RTX4070"
+  name: "cartpole_2048_gpu"
